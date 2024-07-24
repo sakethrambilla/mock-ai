@@ -24,7 +24,7 @@ export default async function page() {
           <AddNewInterview />
           {data.map((interview) => (
             <div
-              className="flex w-full max-w-2xl flex-col items-center justify-center gap-4 rounded-xl border-2 bg-secondary"
+              className="flex w-full max-w-2xl flex-col items-center justify-center gap-4 rounded-xl border-2 bg-secondary py-4"
               key={interview.id}
             >
               <h2 className="text-2xl">{interview.jobPosition}</h2>

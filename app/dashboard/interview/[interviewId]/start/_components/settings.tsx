@@ -58,13 +58,13 @@ const Settings: React.FC = () => {
       <label className="mb-2 block text-sm font-medium text-gray-700">
         Select Microphone
       </label>
-      <Select
+      {/* <Select
         value={selectedDevice}
         onChange={handleDeviceChange}
         options={options}
         className="basic-single"
         classNamePrefix="select"
-      />
+      /> */}
     </div>
   );
 };

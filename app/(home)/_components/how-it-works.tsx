@@ -15,10 +15,9 @@ export default function HowItWorks() {
         </div>
         {/* Description text */}
         <p className="w-2/3 text-center text-xl">
-          Our step-by-step guide will show you how to use our AI mock interview
-          platform to improve your interview skills. With personalized feedback
-          and realistic interview scenarios, you'll gain the confidence you need
-          to succeed.
+          {
+            "Our step-by-step guide will show you how to use our AI mock interview splatform to improve your interview skills. With personalized feedback and realistic interview scenarios, you'll gain the confidence you need to succeed."
+          }
         </p>
       </div>
 

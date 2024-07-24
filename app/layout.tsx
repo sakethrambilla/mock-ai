@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider afterSignOutUrl={"http://localhost:3000"}>
+    <ClerkProvider afterSignOutUrl={"/"}>
       <html lang="en" style={{ scrollBehavior: "smooth" }}>
         {" "}
         <link rel="icon" href="/images/logo.svg" sizes="any" />
