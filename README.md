@@ -47,14 +47,14 @@ DATABASE_URL=""
 Clone the project
 
 ```bash
-  git clone https://github.com/sakethrambilla/totality-frontend-challenge
+  git clone  https://github.com/sakethrambilla/mock-ai.git
 ```
 
 Go to the project directory
 
 
 ```bash
-  cd totality-frontend-challenge
+  cd mock-ai
 ```
 
 Install dependencies
@@ -83,5 +83,5 @@ Project is deployed at:  https://mock-ai-gemini.vercel.app/
 <img title="a title" alt="Alt text" src="public/sample-images/3.png">
 <img title="a title" alt="Alt text" src="public/sample-images/4.png">
 <img title="a title" alt="Alt text" src="public/sample-images/5.png">
-<img title="a title" alt="Alt text" src="public/sample-images/6.png">
-<img title="a title" alt="Alt text" src="public/sample-images/7.png">
+
+
