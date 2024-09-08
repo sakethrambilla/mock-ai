@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+#  Mock-AI: AI-Based Interview Practice Application
 
-First, run the development server:
+Welcome to Mock-AI! This project is a Next.js application designed to provide a seamless AI-based interview practice experience for users. The application is built with modern web technologies, including Next.js, React.js, Tailwind CSS, Shadcn UI, and Gemini API, and features robust authentication and user management with Clerk.
+
+## Features
+
+- **User Authentication** : Secure login with Clerk for easy account management.
+- **AI-Based Interview Practice** : Engage in mock interviews powered by advanced AI, tailored to your desired job roles.
+- **Real-time Feedback** : Receive instant feedback and suggestions on your responses to help you improve.
+- **Personalized Practice** : Customize your practice sessions based on the job role, skill set, and difficulty level.
+- **Profile Section** : Manage your profile details and view personalized recommendations.
+- **Progress Tracking** : View your performance history and track your progress over time.
+- **Question Bank** : Access a vast question bank categorized by job roles and skills.
+
+
+## Tech Stack
+![Medium]( https://img.shields.io/badge/TypeScript-3178C6.svg?style=for-the-badge&logo=TypeScript&logoColor=white)
+![Medium](  https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black)
+![Medium]( https://img.shields.io/badge/Next.js-000000.svg?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![Medium]( https://img.shields.io/badge/Clerk-6C47FF.svg?style=for-the-badge&logo=Clerk&logoColor=white)
+![Medium](https://img.shields.io/badge/Google%20Gemini-8E75B2.svg?style=for-the-badge&logo=Google-Gemini&logoColor=white)
+![Medium]( https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white)
+![Medium]( https://img.shields.io/badge/shadcn/ui-000000.svg?style=for-the-badge&logo=shadcn/ui&logoColor=white)
+![Medium]( https://img.shields.io/badge/Prisma-2D3748.svg?style=for-the-badge&logo=Prisma&logoColor=white)
+![Medium]( https://img.shields.io/badge/PostgreSQL-4169E1.svg?style=for-the-badge&logo=PostgreSQL&logoColor=white)
+![Medium]( https://img.shields.io/badge/Vercel-000000.svg?style=for-the-badge&logo=Vercel&logoColor=white)
+
+
+
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=""
+CLERK_SECRET_KEY=""
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_GEMINI_API_KEY=""
+NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT=2
+DATABASE_URL=""
+```
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/sakethrambilla/totality-frontend-challenge
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+  cd totality-frontend-challenge
+```
 
-## Learn More
+Install dependencies
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+  npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Start the server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+  npm run dev
+```
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Deployment
+
+Project is deployed at:  https://mock-ai-gemini.vercel.app/
+
+
+## Screenshots
+
+<img title="a title" alt="Alt text" src="public/sample-images/1.png">
+<img title="a title" alt="Alt text" src="public/sample-images/2.png">
+<img title="a title" alt="Alt text" src="public/sample-images/3.png">
+<img title="a title" alt="Alt text" src="public/sample-images/4.png">
+<img title="a title" alt="Alt text" src="public/sample-images/5.png">
+<img title="a title" alt="Alt text" src="public/sample-images/6.png">
+<img title="a title" alt="Alt text" src="public/sample-images/7.png">
