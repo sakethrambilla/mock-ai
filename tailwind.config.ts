@@ -20,6 +20,7 @@ const config = {
     extend: {
       fontFamily: {
         josefin_sans: ["var(--font-josefin-sans)"],
+        switzer: ["var(--font-switzer)"],
       },
 
       colors: {

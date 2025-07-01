@@ -1,36 +1,95 @@
 "use client";
 import { SignInButton, SignUpButton, useUser } from "@clerk/nextjs";
+import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { Button } from "./ui/button";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function Navbar() {
+const navItems = [
+  {
+    label: "Features",
+    href: "#features",
+  },
+  {
+    label: "How it works",
+    href: "#how-it-works",
+  },
+  {
+    label: "Pricing",
+    href: "#pricing",
+  },
+  {
+    label: "About Us",
+    href: "#about-us",
+  },
+];
+
+export default function Navbar({
+  mainRef,
+}: {
+  mainRef: React.RefObject<HTMLDivElement>;
+}) {
   const { isSignedIn } = useUser();
+  const ref = useRef<HTMLDivElement>(null);
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(
+    () => {
+      // Animate the navbar
+      gsap.to(".navbar", {
+        width: "60%",
+        margin: "20px",
+        backgroundColor: "white",
+        borderRadius: "12px",
+        boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
+        ease: "power2.inOut",
+        duration: 1,
+
+        scrollTrigger: {
+          trigger: mainRef.current,
+          start: "5% 10%",
+          end: "15% 10%",
+          scrub: true,
+          markers: false, // Set to true for debugging
+        },
+      });
+    },
+    { dependencies: [mainRef.current] },
+  ); // Add dependency array
+
   return (
-    <>
+    <div className="navbar-container fixed z-50 flex w-full items-center justify-center">
       {/* Mobile Design */}
 
       {/* Desktop Navbar */}
-      <div className="flex h-20 w-full items-center justify-between border-b-2 px-8 lg:text-xl">
-        <p>
-          Mock.<span className="text-primary">AI</span>
-        </p>
-        <div className="flex gap-8">
-          <div className="flex items-center justify-between gap-8">
-            <Link href={"services"}>About Us</Link>
-            <Link href={"#services"}>Services</Link>
-            <Link href={"#how-it-works"}>How it works</Link>
-          </div>
-          {isSignedIn ? (
-            <Link href={"/dashboard"}>Dashboard</Link>
-          ) : (
-            <SignInButton forceRedirectUrl={"/dashboard"}>
-              <p className="cursor-pointer rounded bg-primary px-4 py-2 text-primary-foreground">
-                {"Sign Up"}
-              </p>
-            </SignInButton>
-          )}
+      <div
+        ref={ref}
+        className="navbar flex h-20 w-4/5 items-center justify-between px-8 lg:text-xl"
+      >
+        <div className="flex items-center justify-center gap-2">
+          <Image
+            src={"/images/logo.png"}
+            alt="logo"
+            width={100}
+            height={100}
+            className="h-6 w-auto"
+          />
+          <p className="font-switzer">MockInt</p>
         </div>
+
+        <div className="flex items-center justify-between gap-8 text-sm">
+          {navItems.map((item) => (
+            <Link key={item.label} href={item.href}>
+              {item.label}
+            </Link>
+          ))}
+        </div>
+
+        <Button>{"Sign Up"}</Button>
       </div>
-    </>
+    </div>
   );
 }

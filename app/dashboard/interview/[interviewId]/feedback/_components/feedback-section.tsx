@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import Link from "next/link";
+import Image from "next/image";
 
 const Feedback = ({ feedbackList }: { feedbackList: any }) => {
   return (

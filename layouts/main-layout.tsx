@@ -1,10 +1,12 @@
+"use client";
 import Navbar from "@/components/navbar";
-import { ReactNode } from "react";
+import { ReactNode, useRef } from "react";
 
 export default function MainLayout({ children }: { children: ReactNode }) {
+  const mainRef = useRef<HTMLDivElement>(null);
   return (
-    <div className="h-full min-h-[100vh] w-full scroll-smooth">
-      <Navbar />
+    <div ref={mainRef} className="relative h-full min-h-screen w-full">
+      <Navbar mainRef={mainRef} />
       {children}
     </div>
   );

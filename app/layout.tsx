@@ -1,15 +1,22 @@
 import type { Metadata } from "next";
-import { Inter, Josefin_Sans } from "next/font/google";
+import { Inter, Josefin_Sans, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import Navbar from "@/components/navbar";
 import { Toaster } from "@/components/ui/toaster";
+import localFont from "next/font/local";
 
 const inter = Inter({ subsets: ["latin"] });
 const josefin_sans = Josefin_Sans({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-josefin-sans",
+});
+
+// custom font
+const switzer = localFont({
+  src: "../public/fonts/Switzer-Variable.ttf",
+  variable: "--font-switzer",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +34,9 @@ export default function RootLayout({
       <html lang="en" style={{ scrollBehavior: "smooth" }}>
         {" "}
         <link rel="icon" href="/images/logo.svg" sizes="any" />
-        <body className={` ${josefin_sans.className}`}>
+        <body
+          className={` ${inter.className} ${switzer.variable} ${josefin_sans.variable}`}
+        >
           {children}
           <Toaster />
         </body>
